@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+
+lines=4
+
+poem() {
+	for ((i=0; i<lines; i++)); do
+		bin/poem current/grammar.txt "$RANDOM"
+	done
+}
+
+poem "$RANDOM" \
+	| tee /dev/stderr \
+	| bin/print \
+		-v 0x28e9 \
+		-p 0x0289 \
+		-e 0x01 \
+		-i 0x00 \
+		-t bulk

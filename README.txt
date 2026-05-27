@@ -23,4 +23,3 @@ Chords and grammars:
 	   where NAME is the name of the performer
 
 	* Put chords under chords/ as NAME.txt
-	   where NAME is the name of the performer
