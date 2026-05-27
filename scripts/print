@@ -1,9 +1,9 @@
 #! /usr/bin/env bash
 
-lines=4
+. files/conf
 
 poem() {
-	for ((i=0; i<lines; i++)); do
+	for ((i=0; i<LINES; i++)); do
 		bin/poem current/grammar.txt "$RANDOM"
 	done
 }

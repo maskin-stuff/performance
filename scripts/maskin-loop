@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+. files/conf
+
 pid=
 
 restart() {
@@ -9,7 +11,10 @@ restart() {
 trap restart SIGUSR1
 
 while :; do
-	bin/maskin current/grammar.txt current/chords.txt &
+	bin/maskin \
+		-m "$MIDI_PORT" \
+		current/grammar.txt \
+		current/chords.txt &
 	pid=$!
 	wait "$pid"
 	echo
