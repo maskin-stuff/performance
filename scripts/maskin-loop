@@ -1,0 +1,16 @@
+#! /usr/bin/env bash
+
+pid=
+
+restart() {
+	kill "$pid"
+}
+
+trap restart SIGUSR1
+
+while :; do
+	bin/maskin current/grammar.txt current/chords.txt &
+	pid=$!
+	wait "$pid"
+	echo
+done

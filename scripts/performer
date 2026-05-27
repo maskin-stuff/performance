@@ -1,0 +1,21 @@
+#! /usr/bin/env bash
+
+if [ -z "$1" ]; then
+	>&2 echo missing NAME
+	exit 1
+fi
+
+if [ ! -f grammars/"$1".txt ]; then
+	>&2 echo missing grammars/"$1".txt
+	exit 1
+fi
+
+if [ ! -f chords/"$1".txt ]; then
+	>&2 echo missing chords/"$1".txt
+	exit 1
+fi
+
+ln -sf "$PWD"/grammars/"$1".txt current/grammar.txt
+ln -sf "$PWD"/chords/"$1".txt current/chords.txt
+
+pkill -SIGUSR1 -f maskin-loop
