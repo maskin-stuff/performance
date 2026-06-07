@@ -1,4 +1,5 @@
 #! /usr/bin/env false
 
 MIDI_PORT=57121 # UDP port for MIDI messages
-LINES=4         # Number of lines per printed poem
+LINES=1         # Number of lines per printed poem
+EMPTY=2		# Number of empty lines under poem
