@@ -6,7 +6,7 @@ POEM_PATH=
 
 mkdir -p bin current chords grammars
 
-ln -sf "$MASKINEN_PATH" bin/maskinen
+ln -sf "$MASKINEN_PATH" bin/maskin
 ln -sf "$PRINT_PATH" bin/print
 ln -sf "$POEM_PATH" bin/poem
 
