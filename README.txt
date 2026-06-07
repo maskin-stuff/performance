@@ -6,7 +6,7 @@ Performance setup:
 	* Run 'source setup'
 	   This will setup PATH to include project specific scripts
 
-	* Run 'dhcp-server' in its own terminal
+	* Run 'setup-ip' and 'dnsmasq-wrapped' in its own terminal
 	   This will make sure OSC messages will be received
 
 	* Run 'maskin-loop' in its own terminal
