@@ -1,0 +1,2 @@
+#! /usr/bin/env bash
+sudo dnsmasq --no-daemon --conf-file=files/dnsmasq.conf
